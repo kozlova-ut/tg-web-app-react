@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tg-web-app-react/static/css/main.431c217e.css",
+    "main.js": "/tg-web-app-react/static/js/main.4772c26c.js",
+    "index.html": "/tg-web-app-react/index.html",
+    "main.431c217e.css.map": "/tg-web-app-react/static/css/main.431c217e.css.map",
+    "main.4772c26c.js.map": "/tg-web-app-react/static/js/main.4772c26c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.431c217e.css",
+    "static/js/main.4772c26c.js"
+  ]
+}
