@@ -1,8 +1,8 @@
 {
   "name": "tg-web-app-react",
   "version": "0.1.0",
-  "homepage": "https://kozlova-ut.github.io/tg-web-app-react/",
-  "private": true,
+  "homepage": "https://kozlova-ut.github.io/tg-web-app-react",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
