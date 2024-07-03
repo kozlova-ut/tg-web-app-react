@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=./index.html">
+  <script>
+    // This script will redirect to the correct route
+    document.addEventListener("DOMContentLoaded", function() {
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      var basePath = "/tg-web-app-react";
+      if (pathname.startsWith(basePath)) {
+        var newPath = pathname.replace(basePath, "");
+        window.location.replace(basePath + newPath + search + hash);
+      } else {
+        window.location.replace(basePath + "/" + search + hash);
+      }
+    });
+  </script>
 </head>
 <body>
 </body>
