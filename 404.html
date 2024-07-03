@@ -7,11 +7,15 @@
     // This script will redirect to the correct route
     document.addEventListener("DOMContentLoaded", function() {
       var pathname = window.location.pathname;
-      if (pathname !== "/") {
-        window.location.replace("/#" + pathname);
+      var basePath = "/tg-web-app-react";
+      if (pathname.startsWith(basePath)) {
+        var newPath = pathname.replace(basePath, "");
+        window.location.replace(basePath + "/#" + newPath);
+      } else {
+        window.location.replace(basePath + "/#/");
       }
     });
-  </script>
+  </script>git 
 </head>
 <body>
 </body>
