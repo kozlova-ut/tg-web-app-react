@@ -10,12 +10,12 @@
       var basePath = "/tg-web-app-react";
       if (pathname.startsWith(basePath)) {
         var newPath = pathname.replace(basePath, "");
-        window.location.replace(basePath + "/#" + newPath);
+        window.location.replace(basePath + newPath);
       } else {
-        window.location.replace(basePath + "/#/");
+        window.location.replace(basePath + "/");
       }
     });
-  </script>git 
+  </script>
 </head>
 <body>
 </body>
