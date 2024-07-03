@@ -1,3 +1,5 @@
+import { queries } from "@testing-library/react";
+
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
@@ -20,5 +22,6 @@ export function useTelegram() {
         onToggleButton,
         tg,
         user: tg.initDataUnsafe?.user,
+        queryId: tg.initDataUnsafe?.query_id,
     }
 }
