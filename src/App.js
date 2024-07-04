@@ -10,8 +10,10 @@ function App() {
   const {tg} = useTelegram();
 
   useEffect(() => {
+    console.log('App component mounted');
     tg.ready();
-  }, [tg])
+    console.log('Telegram ready');
+  }, [])
 
   return (
     <div className="App">
