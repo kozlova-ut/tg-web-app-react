@@ -1,5 +1,3 @@
-import { queries } from "@testing-library/react";
-
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
