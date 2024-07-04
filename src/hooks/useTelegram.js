@@ -1,6 +1,7 @@
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
+    console.log('Telegram WebApp:', tg);
 
     const onClose = () => {
         tg.close();
