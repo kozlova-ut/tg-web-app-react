@@ -22,7 +22,7 @@ const getTotalPrice = (items = []) => {
 }
 
 const ProductList = () => {
-    console.log('ProductListProductListProductListProductListProductListProductList');
+    console.log('ProductList component rendered');
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
 
@@ -42,6 +42,7 @@ const ProductList = () => {
     }, [addedItems])
 
     useEffect(() => {
+        console.log('ProductList useEffect called');
         tg.onEvent('mainButtonClicked', onSendData)
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
