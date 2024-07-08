@@ -15,14 +15,13 @@ const products = [
     {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
 ]
 
-const getTotalPrice = (items = []) => {
+const getTotalPrice = (items) => {
     return items.reduce((acc, item) => {
         return acc += item.price
     }, 0)
 }
 
 const ProductList = () => {
-    console.log('ProductList component rendered');
     const [addedItems, setAddedItems] = useState([]);
     const {tg, queryId} = useTelegram();
 
@@ -30,6 +29,7 @@ const ProductList = () => {
         const data = {
             products: addedItems,
             totalPrice: getTotalPrice(addedItems),
+            queryId,
         }
         fetch('http://localhost:8000', {
             method: 'POST',
@@ -38,10 +38,9 @@ const ProductList = () => {
             },
             body: JSON.stringify(data)
         })
-    }, [addedItems])
+    }, [])
 
     useEffect(() => {
-        console.log('ProductList useEffect called');
         tg.onEvent('mainButtonClicked', onSendData)
         return () => {
             tg.offEvent('mainButtonClicked', onSendData)
