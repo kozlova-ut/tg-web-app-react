@@ -7,7 +7,7 @@ const Form = () => {
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [gender, setGender] = useState('male');
-    const {tg} = useTelegram;
+    const {tg} = useTelegram();
 
     useEffect(() => {
         tg.MainButton.setParams({
