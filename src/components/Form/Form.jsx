@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Form.css';
+import { useTelegram } from "../../hooks/useTelegram";
 
 const Form = () => {
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [gender, setGender] = useState('male');
+    const {tg} = useTelegram;
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Отправить данные'
+        })
+    }, [tg])
+
+    useEffect(() => {
+        if (!name || !surname) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+        }
+    }, [name, surname, tg])
 
     const onChangeName = (e) => {
         setName(e.target.value);
