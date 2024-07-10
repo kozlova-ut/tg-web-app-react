@@ -19,9 +19,9 @@ const Form = () => {
     }, [tg, name, surname, gender])
 
     useEffect(() => {
-        tg.WebApp.onEvent('mainButtonCkecked', onSendData);
+        tg.WebApp.onEvent('mainButtonClicked', onSendData);
         return () => {
-            tg.WebApp.offEvent('mainButtonCkecked', onSendData);
+            tg.WebApp.offEvent('mainButtonClicked', onSendData);
         }
     }, [tg, onSendData])
 
