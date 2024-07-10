@@ -2,7 +2,7 @@ import React from "react";
 import './ProductList.css';
 import ProductItem from '../ProductItem/ProductItem';
 import { useState } from "react";
-import { useTelegram } from "../hooks/useTelegram";
+import { useTelegram } from "../../hooks/useTelegram";
 
 const products = [
     {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
